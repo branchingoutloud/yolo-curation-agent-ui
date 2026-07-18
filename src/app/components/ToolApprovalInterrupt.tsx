@@ -9,9 +9,7 @@ import { MarkdownContent } from "@/app/components/MarkdownContent";
 import { cn } from "@/lib/utils";
 
 function formatStageLabel(stage: string): string {
-  return stage
-    .replace(/[_-]+/g, " ")
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+  return stage.replace(/[_-]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 }
 
 interface ToolApprovalInterruptProps {

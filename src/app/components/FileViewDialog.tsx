@@ -304,8 +304,8 @@ export const FileViewDialog = React.memo<{
                       className="text-muted-foreground"
                     />
                     <p className="text-sm text-muted-foreground">
-                      Binary file - preview not available. Use Download to
-                      save it locally.
+                      Binary file - preview not available. Use Download to save
+                      it locally.
                     </p>
                   </div>
                 ) : fileContent ? (

@@ -88,9 +88,9 @@ export default {
         xs: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
       },
       backgroundColor: {
-        primary: "var(--bg-primary)",
+        // `primary`/`secondary` deliberately omitted: they must resolve to the
+        // shadcn `colors` tokens below, not the (undefined) --bg-* variables.
         "primary-hover": "var(--bg-primary_hover)",
-        secondary: "var(--bg-secondary)",
         "secondary-hover": "var(--bg-secondary_hover)",
         tertiary: "var(--bg-tertiary)",
         quaternary: "var(--bg-quaternary)",
@@ -131,6 +131,7 @@ export default {
         "status-red": "var(--border-status-red)",
       },
       textColor: {
+        brand: "hsl(var(--primary))",
         primary: "var(--text-primary)",
         secondary: "var(--text-secondary)",
         tertiary: "var(--text-tertiary)",

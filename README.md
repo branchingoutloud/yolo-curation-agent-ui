@@ -77,12 +77,12 @@ Settings UI (and persisted to `localStorage`) — there's no env var for those.
 
 ## What shows up, and how it maps to the agent
 
-| UI panel | What it renders | Backing agent concept |
-|---|---|---|
-| Chat thread | Orchestrator's messages and `task()` calls to subagents | The orchestrator graph |
-| Files panel | Live virtual filesystem — `plan.md`, `sources.json`, `dataset/data.yaml`, `eval_report.md`, `weak_classes.json`, etc. | The agent's `CompositeBackend` / `FilesystemBackend` |
-| Todos | Whatever the orchestrator writes via `write_todos` | Orchestrator's self-planning |
-| Approval prompts | Pauses with approve/edit/reject when the orchestrator calls `request_approval` | The three HITL gates (plan → model size → iteration) |
+| UI panel         | What it renders                                                                                                       | Backing agent concept                                |
+| ---------------- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- |
+| Chat thread      | Orchestrator's messages and `task()` calls to subagents                                                               | The orchestrator graph                               |
+| Files panel      | Live virtual filesystem — `plan.md`, `sources.json`, `dataset/data.yaml`, `eval_report.md`, `weak_classes.json`, etc. | The agent's `CompositeBackend` / `FilesystemBackend` |
+| Todos            | Whatever the orchestrator writes via `write_todos`                                                                    | Orchestrator's self-planning                         |
+| Approval prompts | Pauses with approve/edit/reject when the orchestrator calls `request_approval`                                        | The three HITL gates (plan → model size → iteration) |
 
 **Debug Mode** (toggle in the UI) steps the graph one LangGraph node at a time instead
 of running end-to-end. Useful for rehearsing or isolating a failing subagent call —
